@@ -1,3 +1,17 @@
-<!--HTML 주석 안에서 {{ $name }}을(를) 출력합니다.-->
-{{--블레이드 주석 안에서 {{ $name }}을(를) 출력합니다.--}}
-<h1>{{ $greeting or 'Hello ' }} {{ $name or '' }}</h1>
+@extends('layouts.master')
+
+@section('style')
+    <style>
+    body {background: green; color: white;}
+    </style>
+@endsection
+
+@section('content')
+    @include('partials.footer')
+@endsection
+
+@section('script')
+    <script>
+    alert("저는 자식 뷰의 'script' 섹션입니다.");
+    </script>
+@endsection

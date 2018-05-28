@@ -12,8 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('welcome')->with([
-            'name'      => 'Foo',
-            'greeting'  => '안녕하세요?',
-    ]);
+    return view('welcome');
 });
