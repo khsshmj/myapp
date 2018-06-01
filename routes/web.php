@@ -78,6 +78,12 @@ EOT;
     return app(ParsedownExtra::class)->text($text);
 });
 
+Route::get('docs/{file?}', function ($file = null) {
+    $text   = (new App\documentation)->get($file);
+    
+    return app(ParsedownExtra::class)->text($text);
+});
+
 // DB::listen(function ($query) {
 //     dump($query->sql);
 // });
